@@ -6,7 +6,7 @@ class OwnersController < ApplicationController
   end
 
   def new
-    @property = Owner.new
+    @owner = Owner.new
   end
 
   def edit
@@ -16,8 +16,8 @@ class OwnersController < ApplicationController
   end
 
   def create
-    @property = Owner.new(property_params)
-    if @property.save
+    @owner = Owner.new(owner_params)
+    if @owner.save
       redirect_to action: :index
     else
       render :new
