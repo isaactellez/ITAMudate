@@ -1,0 +1,45 @@
+<h1>Regístrate</h1>
+
+<% @owner.errors.full_messages.each do |full_message| %>
+	<p><%= full_message %></p>
+<% end %>
+
+<%= form_for @owner do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  </br>
+  </br>
+
+  <%= f.label :name %>
+	<%= f.text_field :name %>
+
+	</br>
+	</br>
+
+  <%= f.label :surname %>
+	<%= f.text_field :surname %>
+
+	</br>
+	</br>
+
+  <%= f.label :email %>
+	<%= f.text_field :email %>
+
+	</br>
+	</br>
+
+  <%= f.label :password %>
+	<%= f.text_field :password %>
+
+	</br>
+	</br>
+
+  <%= f.label :phone %>
+	<%= f.text_field :phone %>
+
+	</br>
+  </br>
+
+	<%= f.submit 'Registrar' %>
+<% end %>
